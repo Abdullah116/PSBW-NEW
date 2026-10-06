@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>PERCOBAAN PSBW KELAS MALAM</title>
+    </head>
+    <body>
+        <h1 id="judul">PERCOBAAN DOM DAN JS KELAS MALAM</h1>
+        <button id="btn">TAMBAH LIST BARU</button>
+        <ul id="daftar">
+            <li class="isi">MENU-1</li>
+            <li class="isi">MENU-2</li>
+            <li class="isi">MENU-3</li>
+        </ul>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        const getjudul = document.querySelector("h1")
+        // console.log(getjudul)
+        const newjudul = getjudul.textContent = "PERUBAHAN JUDUL BARU"
+        // console.log(newjudul)
+
+        const getid = document.querySelector("ul")
+        const tombol = document.getElementById("btn")
+        var inc = 1
+        tombol.addEventListener("click", function() {
+            const newli = document.createElement("li")
+            newli.textContent = "MENU-"+inc
+            newli.classList.add("item")
+            getid.append(newli)
+            inc++
+        })
+
+        const getli = document.querySelector("li")
+
+        $(document).ready(function() {
+            console.log("MASUK")
+        })
+
+    </script>
+</html>
